@@ -10,10 +10,35 @@ from feature_format import featureFormat, targetFeatureSplit
 ### read in data dictionary, convert to numpy array
 data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "r") )
 features = ["salary", "bonus"]
+data_dict.pop("TOTAL",0)
 data = featureFormat(data_dict, features)
 
 
 ### your code below
 
+#print data[0]
+#data_sorted = sorted(data, key=lambda)
+max = 0.0
+maxs = 0.0
+maxb = 0.0
 
+for point in data:
+    salary = point[0]
+    bonus = point[1]
+    if bonus > 5000000 and salary > 1000000:
+        print salary
+        print bonus
+    if max < bonus + salary:
+        max = salary + bonus
+        maxs = salary
+        maxb = bonus
+    matplotlib.pyplot.scatter( salary, bonus )
+
+print max
+print maxs
+print maxb
+
+matplotlib.pyplot.xlabel("salary")
+matplotlib.pyplot.ylabel("bonus")
+matplotlib.pyplot.show()
 
