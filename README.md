@@ -6,7 +6,7 @@ Enron's scandal - identify POIs using Machine Learning
 - [Sklearn documentation](http://scikit-learn.org/stable/documentation.html)
 
 
-## How to run the code
+## How to run the final project
 
 To run the code, make sure you are located in the folder `final_project`. Then just run the following command:
 ```{Shell}
